@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock - Karesse DSouza</title>
+    <link rel="stylesheet" href="karesse.css">
+</head>
+<body>
+<div class="background-image"></div>
+<header>
+    <div class="header-left">
+        <div class="switch-container">
+            <span class="switch-label switch-label-12">12hr</span>
+            <div class="switch" id="format-toggle-switch">
+                <span class="slider"></span>
+            </div>
+            <span class="switch-label switch-label-24">24hr</span>
+        </div>
+    </div>
+    <div class="header-content">
+        <h1>WorldTime Explorer</h1>
+        <p class="header-tagline">"Stay In Sync With Every City!"</p>
+    </div>
+    <button id="theme-toggle" aria-label="Toggle light/dark theme" tabindex="0">
+        <span class="toggle-icon">🌙</span>
+    </button>
+</header>
+<main>
+    <section class="city-times" aria-label="City Times">
+        <div class="city-card" id="pune">
+            <h2>Pune, India</h2>
+            <time class="city-time" aria-live="polite"></time>
+            <div class="city-weather">
+                <span class="weather-icon"></span>
+                <span class="weather-temp"></span>
+                <span class="weather-desc"></span>
+                <div class="weather-sun">
+                    <span class="weather-sunrise"></span>
+                    <span class="weather-sunset"></span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="view-map-btn" data-city="pune">View on Map</button>
+                <button class="view-images-btn" data-city="pune">View Images</button>
+            </div>
+        </div>
+        <div class="city-card" id="singapore">
+            <h2>Singapore, Singapore</h2>
+            <time class="city-time" aria-live="polite"></time>
+            <div class="city-weather">
+                <span class="weather-icon"></span>
+                <span class="weather-temp"></span>
+                <span class="weather-desc"></span>
+                <div class="weather-sun">
+                    <span class="weather-sunrise"></span>
+                    <span class="weather-sunset"></span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="view-map-btn" data-city="singapore">View on Map</button>
+                <button class="view-images-btn" data-city="singapore">View Images</button>
+            </div>
+        </div>
+        <div class="city-card" id="manila">
+            <h2>Manila, Philippines</h2>
+            <time class="city-time" aria-live="polite"></time>
+            <div class="city-weather">
+                <span class="weather-icon"></span>
+                <span class="weather-temp"></span>
+                <span class="weather-desc"></span>
+                <div class="weather-sun">
+                    <span class="weather-sunrise"></span>
+                    <span class="weather-sunset"></span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="view-map-btn" data-city="manila">View on Map</button>
+                <button class="view-images-btn" data-city="manila">View Images</button>
+            </div>
+        </div>
+        <div class="city-card" id="losangeles">
+            <h2>Los Angeles, CA, USA</h2>
+            <time class="city-time" aria-live="polite"></time>
+            <div class="city-weather">
+                <span class="weather-icon"></span>
+                <span class="weather-temp"></span>
+                <span class="weather-desc"></span>
+                <div class="weather-sun">
+                    <span class="weather-sunrise"></span>
+                    <span class="weather-sunset"></span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="view-map-btn" data-city="losangeles">View on Map</button>
+                <button class="view-images-btn" data-city="losangeles">View Images</button>
+            </div>
+        </div>
+        <div class="city-card" id="cali">
+            <h2>Cali, Colombia</h2>
+            <time class="city-time" aria-live="polite"></time>
+            <div class="city-weather">
+                <span class="weather-icon"></span>
+                <span class="weather-temp"></span>
+                <span class="weather-desc"></span>
+                <div class="weather-sun">
+                    <span class="weather-sunrise"></span>
+                    <span class="weather-sunset"></span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="view-map-btn" data-city="cali">View on Map</button>
+                <button class="view-images-btn" data-city="cali">View Images</button>
+            </div>
+        </div>
+        <div class="city-card" id="atlanta">
+            <h2>Atlanta, GA, USA</h2>
+            <time class="city-time" aria-live="polite"></time>
+            <div class="city-weather">
+                <span class="weather-icon"></span>
+                <span class="weather-temp"></span>
+                <span class="weather-desc"></span>
+                <div class="weather-sun">
+                    <span class="weather-sunrise"></span>
+                    <span class="weather-sunset"></span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="view-map-btn" data-city="atlanta">View on Map</button>
+                <button class="view-images-btn" data-city="atlanta">View Images</button>
+            </div>
+        </div>
+        <div class="city-card" id="london">
+            <h2>London, UK</h2>
+            <time class="city-time" aria-live="polite"></time>
+            <div class="city-weather">
+                <span class="weather-icon"></span>
+                <span class="weather-temp"></span>
+                <span class="weather-desc"></span>
+                <div class="weather-sun">
+                    <span class="weather-sunrise"></span>
+                    <span class="weather-sunset"></span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="view-map-btn" data-city="london">View on Map</button>
+                <button class="view-images-btn" data-city="london">View Images</button>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; Designed By Karesse DSouza</p>
+</footer>
+<!-- Modal for image carousel -->
+<div id="image-modal" class="image-modal" aria-hidden="true">
+    <div class="image-modal-overlay"></div>
+    <div class="image-modal-content" role="dialog" aria-modal="true" aria-label="City Images">
+        <button class="image-modal-close" aria-label="Close">&times;</button>
+        <div class="image-carousel">
+            <button class="carousel-prev" aria-label="Previous image">&#8592;</button>
+            <img class="carousel-img" src="" alt="City image" />
+            <button class="carousel-next" aria-label="Next image">&#8594;</button>
+        </div>
+        <div class="image-caption"></div>
+        <div class="carousel-indicators"></div>
+    </div>
+</div>
+<script src="karesse.js"></script>
+</body>
+</html>
